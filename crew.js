@@ -1,7 +1,7 @@
 const { Collection, Client, Intents, MessageEmbed, MessageSelectMenu } = require('discord.js');
 const { MessageActionRow, MessageButton } = require('discord.js');
 const Discord = require("discord.js")
-const creza = require('./creza.json');
+const crew = require('./crew.json');
 const fs = require('fs');
 const moment = require("moment")
 require("moment-duration-format")
@@ -19,7 +19,7 @@ const client = new Client({
   ],
   presence: {
     activities: [{
-      name: `Creza 💕`,
+      name: `Crew 💕`,
       type: "WATCHING",
     }],
     status: "dnd",
@@ -29,7 +29,7 @@ const { readdirSync } = require('fs');
 const { join } = require('path');
 const db = require("quick.db")
 
-var prefix = creza.prefix
+var prefix = crew.prefix
 
 client.commands= new Discord.Collection(); 
 
@@ -68,7 +68,7 @@ client.on('ready', () => {
 })
 
 client.on('ready', () => {
-  client.channels.cache.get(creza.voiceID).then(
+  client.channels.cache.get(crew.voiceID).then(
     console.log('Başarıyla ses kanalına girdim.')
   )
 })
@@ -85,4 +85,4 @@ client.on('voiceStateUpdate', async (___, newState) => {
 });
 
 
-client.login(creza.token)
+client.login(crew.token)
