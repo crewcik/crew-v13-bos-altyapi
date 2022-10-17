@@ -67,11 +67,10 @@ client.on('ready', () => {
   console.log(`${client.user.tag} Aktif`)
 })
 
-client.on('ready', () => {
-  client.channels.cache.get(crew.voiceID).then(
-    console.log('Başarıyla ses kanalına girdim.')
-  )
-})
+/*
+    Bu satıra botu sese sokma komutunu yazabilirsiniz.
+
+*/
     
 client.on('voiceStateUpdate', async (___, newState) => {
   if (
