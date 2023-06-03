@@ -42,7 +42,7 @@ for (const file of commandFiles) {
 }
 
 
-client.on("message", async message => {
+client.on("messageCreate", async message => {
 
     if(message.author.bot) return;
 
