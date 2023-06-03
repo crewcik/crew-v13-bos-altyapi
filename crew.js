@@ -19,7 +19,7 @@ const client = new Client({
   ],
   presence: {
     activities: [{
-      name: `Crew 💕`,
+      name: `Crewcik`,
       type: "WATCHING",
     }],
     status: "dnd",
