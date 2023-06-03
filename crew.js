@@ -5,7 +5,6 @@ const crew = require('./crew.json');
 const fs = require('fs');
 const moment = require("moment")
 require("moment-duration-format")
-const chalk = require("chalk")
 const os = require("os")
 const client = new Client({
   intents: [
@@ -19,7 +18,7 @@ const client = new Client({
   ],
   presence: {
     activities: [{
-      name: `Crew 💕`,
+      name: `Crewcik`,
       type: "WATCHING",
     }],
     status: "dnd",
@@ -27,7 +26,7 @@ const client = new Client({
 });
 const { readdirSync } = require('fs'); 
 const { join } = require('path');
-const db = require("quick.db")
+const db = require("croxydb")
 
 var prefix = crew.prefix
 
@@ -67,10 +66,6 @@ client.on('ready', () => {
   console.log(`${client.user.tag} Aktif`)
 })
 
-/*
-    Bu satıra botu sese sokma komutunu yazabilirsiniz.
-
-*/
     
 client.on('voiceStateUpdate', async (___, newState) => {
   if (
